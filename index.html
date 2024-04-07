@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript web appplication 3</title>
+    <script>
+        function demo()
+        {
+            var file = document.getElementById("file").value.replace(/.*(\/|\\)/, '');
+            var box = document.getElementById("show");
+            box.style.backgroundImage = "url("+file+")"; 
+        }
+        </script>
+        <style>
+            #show{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                margin: 50px auto;
+                background-size: cover;       
+                 }
+        </style>
+</head>
+<body>
+    <div id="show"></div>
+    <input type="file" accept=".png" id="file" onchange="demo()">
+ 
+</body>
+</html>
