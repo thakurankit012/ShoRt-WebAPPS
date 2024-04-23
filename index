@@ -113,6 +113,10 @@ input[type="file"]:focus {
 <body>
     <input type="file" id="fileInput" multiple>
     <div id="gallery"></div>
-    <script src="script.js"></script>
+    <script src="script.js">
+const fileInput = document.getElementById('fileInput');
+const gallery = document.getElementById('gallery');
+
+</script>
 </body>
 </html>
