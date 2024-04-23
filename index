@@ -127,7 +127,7 @@ fileInput.addEventListener('change', (event) => {
             link.download = file.name; // Set the download attribute to the file name
             image.src = reader.result;
             image.classList.add('image');
-            link.appendChild(image); // Append the image to the link
+            link.appendChild(image); 
             gallery.appendChild(link); 
         };
         reader.readAsDataURL(file);
