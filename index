@@ -124,7 +124,7 @@ fileInput.addEventListener('change', (event) => {
             const image = document.createElement('img');
             const link = document.createElement('a'); // Create a link element
             link.href = reader.result; // Set the link's href to the image data URL
-            link.download = file.name; // Set the download attribute to the file name
+            link.download = file.name; 
             image.src = reader.result;
             image.classList.add('image');
             link.appendChild(image); 
