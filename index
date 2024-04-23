@@ -116,6 +116,24 @@ input[type="file"]:focus {
     <script src="script.js">
 const fileInput = document.getElementById('fileInput');
 const gallery = document.getElementById('gallery');
+fileInput.addEventListener('change', (event) => {
+    const files = event.target.files;
+    Array.from(files).forEach(file => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const image = document.createElement('img');
+            const link = document.createElement('a'); // Create a link element
+            link.href = reader.result; // Set the link's href to the image data URL
+            link.download = file.name; // Set the download attribute to the file name
+            image.src = reader.result;
+            image.classList.add('image');
+            link.appendChild(image); // Append the image to the link
+            gallery.appendChild(link); // Append the link to the gallery
+        };
+        reader.readAsDataURL(file);
+    });
+});
+
 
 </script>
 </body>
