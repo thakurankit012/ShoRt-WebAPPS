@@ -87,6 +87,26 @@ h1 {
 .image-container:hover .download-button {
     opacity: 1;
 }
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="file"]:hover {
+    border-color: #999;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #66afe9;
+    box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+}
 
     </style>
 </head>
