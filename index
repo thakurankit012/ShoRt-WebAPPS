@@ -128,7 +128,7 @@ fileInput.addEventListener('change', (event) => {
             image.src = reader.result;
             image.classList.add('image');
             link.appendChild(image); // Append the image to the link
-            gallery.appendChild(link); // Append the link to the gallery
+            gallery.appendChild(link); 
         };
         reader.readAsDataURL(file);
     });
